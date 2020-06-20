@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        let choises = ['rock', 'paper', 'scissors'];
+        let compScore = 0, playerScore = 0, tieScore = 0;
+        function computerPlay(choises) {
+            return choises[Math.floor(3 * Math.random())]
+        }
+
+        function playerChoise() {
+            playerSelection = prompt('Rock, Paper, Sissors?').toLowerCase();
+            while (!(choises.includes(playerSelection))) {
+                playerSelection = prompt('Not a valid option, choose wisely >:(').toLowerCase();
+            }
+            return playerSelection
+        }
+
+        function playRound(comp, play) {
+            if (((comp == 'rock') && (play == 'paper')) ||
+                ((comp == 'paper') && (play == 'scissors')) ||
+                ((comp == 'scissors') && (play == 'rock'))) {
+                playerScore++;
+                return 'You Won <3'
+            }
+
+            else if (((comp == 'paper') && (play == 'rock')) ||
+                ((comp == 'rock') && (play == 'scissors')) ||
+                ((comp == 'scissors') && (play == 'paper'))) {
+                compScore++;
+                return 'You Los To Computer :('
+            }
+
+            else {
+                tieScore++;
+                return "It's a Tie"
+            }
+        }
+
+        function game() {
+            alert("Welcome to the game of Rock, Paper, Sissors.....");
+            const noOfRounds = 5;
+            let round = 0;
+            while (round < noOfRounds) {
+                round++;
+                play = playerChoise();
+                comp = computerPlay(choises);
+                console.log(playRound(comp, play));
+            }
+
+            console.log(`Final Score comp: ${compScore} ,\
+player: ${playerScore}, Ties: ${tieScore}`)
+        }
+
+        game()
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
