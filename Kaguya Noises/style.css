@@ -1,0 +1,20 @@
+button{
+    background-color: black;
+    color: white;
+    width: 150px;
+    border: 1px blue solid;
+    padding: 2px;
+    margin-bottom: 5px;
+    box-shadow: 0 3px rgb(108, 122, 245);
+    border-radius: 8px;
+}
+
+button:hover{
+    background-color: #333;
+}
+
+button:active{
+    background-color: #111;
+    box-shadow: 0 0px;
+    transform: translateY(3px);
+}
