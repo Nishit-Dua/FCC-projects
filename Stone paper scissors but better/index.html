@@ -2,24 +2,37 @@
 <html lang="en">
 
 <head>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <div>
-            <button data-val="rock">Rock</button>
+        <div class="rcs">
+            <div class="elements">
+                <img src="imgs/Rock.webp" alt="Rock Image">
+                <button class="btn" data-val="rock">Rock</button>
+            </div>
+
+            <div class="elements">
+                <img src="imgs/Paper.webp" alt="Paper Image">
+                <button class="btn" data-val="paper">Paper</button>
+            </div>
+
+            <div class="elements">
+                <img src="imgs/Scissors.webp" alt="Scissors Image">
+                <button class="btn" data-val="scissors">Scissors</button>
+            </div>
         </div>
-        <div>
-            <button data-val="paper">Paper</button>
-        </div>
-        <div>
-            <button data-val="scissors">Scissors</button>
+
+        <div class="text-stuff">
+            <p id="choise"></p>
+            <p id="winner">Play the game</p>
+            <p id="score">Current score => Comp: 0, player: 0 </p>
         </div>
     </div>
-    <p id="choise"></p>
-    <p id="winner">Play the game</p>
-    <p id="score">Current score => Comp: 0, player: 0 </p>
+
+
+
 
     <script src="./script.js"></script>
 </body>

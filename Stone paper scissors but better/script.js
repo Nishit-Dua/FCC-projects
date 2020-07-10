@@ -39,7 +39,7 @@ buttons.forEach((button) => {
         const score = document.querySelector('#score')
         const choise_ = document.querySelector('#choise')
         display.innerHTML = playRound(comp, player)
-        choise_.innerHTML = `You choose ${player} and the computer choose ${comp}`
-        score.innerHTML = `Current score => Comp: ${compScore}, player: ${playerScore}, ties: ${tieScore}`
+        choise_.innerHTML = `You choose <span class = "value">${player}</span> and the computer choose <span class = "value">${comp}</span>`
+        score.innerHTML = `Current score => Comp: <span class = "value">${compScore}</span>, player: <span class = "value">${playerScore}</span>, ties: ${tieScore}`
     });
 });
